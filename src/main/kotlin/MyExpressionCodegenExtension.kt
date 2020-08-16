@@ -19,8 +19,8 @@ class MyExpressionCodegenExtension : SyntheticResolveExtension {
 
     private val functionName = Name.identifier("duplicate")
 
-    override fun getSyntheticFunctionNames(thisDescriptor: ClassDescriptor): List<Name> {
-        return super.getSyntheticFunctionNames(thisDescriptor) + functionName
+    override fun getSyntheticPropertiesNames(thisDescriptor: ClassDescriptor): List<Name> {
+        return listOf(functionName)
     }
 
     override fun generateSyntheticProperties(
